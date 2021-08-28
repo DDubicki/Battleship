@@ -1,3 +1,7 @@
+package UI;
+
+import Squares.Board;
+
 public class Display {
     public void printGameMenu() {
     }

@@ -1,3 +1,5 @@
+import Squares.Ship;
+
 public class Player {
     private Ship[] ships;
 

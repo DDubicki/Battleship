@@ -1,3 +1,5 @@
+package Squares;
+
 public class BoardFactory {
     public Board randomPlacement() {
         return null;
