@@ -1,3 +1,5 @@
+package Squares;
+
 public class Board {
     private Square[][] ocean;
 

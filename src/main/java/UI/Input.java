@@ -1,3 +1,5 @@
+package UI;
+
 public class Input {
     private Input input;
 
