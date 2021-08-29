@@ -1,5 +1,7 @@
 package Squares;
 
+import java.util.ArrayList;
+
 public class Ship {
-    private List<Square> shipFields;
+    private ArrayList<Square> shipFields;
 }
