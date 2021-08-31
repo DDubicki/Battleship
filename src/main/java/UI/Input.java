@@ -1,5 +1,6 @@
 package UI;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Input {
@@ -28,6 +29,12 @@ public class Input {
     }
 
     public char getCoordinateX() {
+        Scanner scanner = new Scanner(System.in);
+        char coordinateX = scanner.next().toUpperCase(Locale.ROOT).charAt(0);
+        boolean isValid = Util.checkCharAtListOfStrings(coordinateX);
+        if (isValid){
+            return coordinateX;
+        }
         return 0;
     }
 
