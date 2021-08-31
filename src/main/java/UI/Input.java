@@ -31,14 +31,12 @@ public class Input {
     public char getCoordinateX() {
         Scanner scanner = new Scanner(System.in);
         char coordinateX = scanner.next().toUpperCase(Locale.ROOT).charAt(0);
-        boolean isValid = Util.checkCharAtListOfStrings(coordinateX);
-        if (isValid){
-            return coordinateX;
-        }
-        return 0;
+        return Util.checkIfCharAtListOfStrings(coordinateX);
     }
 
     public int getCoordinateY() {
-        return 0;
+        Scanner scanner = new Scanner(System.in);
+        int coordinateY = scanner.nextInt();
+        return Util.checkIfNumberInRange(coordinateY);
     }
 }
