@@ -8,7 +8,5 @@ public class Main {
         Display display = new Display();
         display.printGameMenu();
         display.boardingPhase(0);
-
-
     }
 }
