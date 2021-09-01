@@ -7,7 +7,7 @@ import squares.SquareStatus;
 public class Display extends Input {
     //░ █ ֍ ▓ ■
     private static final String emptySpaceSymbol = "░░░";
-    private static final String occupiedSpaceSymbol = "░█░";
+    private static final String occupiedSpaceSymbol = "███";
 
     public static void printCommunicate(String communicate) {
         System.out.println("***" + communicate + "***");
