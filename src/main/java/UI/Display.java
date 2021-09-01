@@ -6,8 +6,8 @@ import squares.SquareStatus;
 
 public class Display extends Input {
     //░ █ ֍ ▓ ■
-    private final String emptySpaceSymbol = "░░░";
-    private final String occupiedSpaceSymbol = "░█░";
+    private static final String emptySpaceSymbol = "░░░";
+    private static final String occupiedSpaceSymbol = "░█░";
 
     public static void printCommunicate(String communicate) {
         System.out.println("***" + communicate + "***");
@@ -43,7 +43,7 @@ public class Display extends Input {
     public void printOutcome() {
     }
 
-    public String getObjectSymbol(Square square) {
+    public static String getObjectSymbol(Square square) {
         SquareStatus status = square.getSquareStatus();
 
         if (status == SquareStatus.EMPTY) {
