@@ -1,3 +1,5 @@
+package play;
+
 import UI.Display;
 
 public class Main {

@@ -7,6 +7,7 @@ public class Input {
     private String firstPlayer;
     private String secondPlayer;
     private Input input;
+    private static final Scanner scanner = new Scanner(System.in);
 
     public String getFirstPlayer() {
         return firstPlayer;
@@ -22,10 +23,9 @@ public class Input {
         this.secondPlayer = secondPlayer;
     }
 
-    public String getPlayerName() {
+    public static String getPlayerName() {
         Scanner scanner = new Scanner(System.in);
-        String name = scanner.nextLine().trim();
-        return name;
+        return scanner.nextLine().trim();
     }
 
     public char getCoordinateX() {
@@ -38,5 +38,16 @@ public class Input {
         Scanner scanner = new Scanner(System.in);
         int coordinateY = scanner.nextInt();
         return Util.checkIfNumberInRange(coordinateY);
+    }
+
+    public static int getAnswer(int minValue, int maxValue) {
+        String userInput = scanner.next();
+        if (Integer.parseInt(userInput) >= minValue && Integer.parseInt(userInput) <= maxValue) {
+            return Integer.parseInt(userInput);
+        } else {
+            Display.printCommunicate(Communicates.wrongValue);
+            getAnswer(minValue, maxValue);
+        }
+        return Integer.parseInt(userInput);
     }
 }
