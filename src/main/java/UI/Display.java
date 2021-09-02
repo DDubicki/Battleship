@@ -8,6 +8,7 @@ public class Display extends Input {
     //░ █ ֍ ▓ ■
     private static final String emptySpaceSymbol = "░░░";
     private static final String occupiedSpaceSymbol = "███";
+    private final char[] coordinateSymbols = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'};
 
     public static void printCommunicate(String communicate) {
         System.out.println("***" + communicate + "***");
@@ -52,7 +53,24 @@ public class Display extends Input {
     public void gamePhase() {
     }
 
-    public void printBoard(Board board) {
+    public void printBoard(Square[][] ocean, int oceanSize) {
+        printCoordinatesY();
+        for (int y = 0; y < oceanSize; y++) {
+            for (int x = 0; x < oceanSize; x++) {
+                System.out.print(Display.getObjectSymbol(ocean[y][x]));
+            }
+            System.out.println(" " + Colors.RESET + (y + 1));
+        }
+    }
+
+    private void printCoordinatesY() {
+        for (int i = 0; i < Board.getBoardSize(); i++) {
+            System.out.print(" " + coordinateSymbols[i] + " ");
+        }
+        System.out.println();
+    }
+
+    private void printCoordinatesX() {
     }
 
     public void printGameplay() {

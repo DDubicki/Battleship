@@ -26,11 +26,6 @@ public class Main {
         ocean[7][7].setSquareStatus(HIT);
         ocean[2][2].setSquareStatus(SUNKEN);
 
-        for (int y = 0; y < oceanSize; y++) {
-            for (int x = 0; x < oceanSize; x++) {
-                System.out.print(Display.getObjectSymbol(ocean[y][x]));
-            }
-            System.out.println();
-        }
+        display.printBoard(ocean, oceanSize);
     }
 }
