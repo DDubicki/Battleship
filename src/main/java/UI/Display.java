@@ -6,11 +6,29 @@ import squares.SquareStatus;
 
 public class Display extends Input {
     //░ █ ֍ ▓ ■
-    private final String emptySpaceSymbol = "░░░";
-    private final String occupiedSpaceSymbol = "░█░";
+    private static final String emptySpaceSymbol = "░░░";
+    private static final String occupiedSpaceSymbol = "███";
 
     public static void printCommunicate(String communicate) {
         System.out.println("***" + communicate + "***");
+    }
+
+    public static String getObjectSymbol(Square square) {
+        SquareStatus status = square.getSquareStatus();
+
+        if (status == SquareStatus.EMPTY) {
+            return Colors.OCEAN + emptySpaceSymbol;
+        } else if (status == SquareStatus.SHIP) {
+            return Colors.WHITE + occupiedSpaceSymbol;
+        } else if (status == SquareStatus.HIT) {
+            return Colors.RED + occupiedSpaceSymbol;
+        } else if (status == SquareStatus.MISSED) {
+            return Colors.YELLOW + occupiedSpaceSymbol;
+        } else if (status == SquareStatus.SUNKEN) {
+            return Colors.BLUE + occupiedSpaceSymbol;
+        } else {
+            return emptySpaceSymbol;
+        }
     }
 
     public void printGameMenu() {
@@ -41,23 +59,5 @@ public class Display extends Input {
     }
 
     public void printOutcome() {
-    }
-
-    public String getObjectSymbol(Square square) {
-        SquareStatus status = square.getSquareStatus();
-
-        if (status == SquareStatus.EMPTY) {
-            return Colors.OCEAN + emptySpaceSymbol;
-        } else if (status == SquareStatus.SHIP) {
-            return Colors.WHITE + occupiedSpaceSymbol;
-        } else if (status == SquareStatus.HIT) {
-            return Colors.RED + occupiedSpaceSymbol;
-        } else if (status == SquareStatus.MISSED) {
-            return Colors.YELLOW + occupiedSpaceSymbol;
-        } else if (status == SquareStatus.SUNKEN) {
-            return Colors.BLUE + occupiedSpaceSymbol;
-        } else {
-            return emptySpaceSymbol;
-        }
     }
 }
