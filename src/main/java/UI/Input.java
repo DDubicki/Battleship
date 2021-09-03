@@ -28,13 +28,13 @@ public class Input {
         return scanner.nextLine().trim();
     }
 
-    public char getCoordinateX() {
+    public static int getCoordinateX() {
         Scanner scanner = new Scanner(System.in);
         char coordinateX = scanner.next().toUpperCase(Locale.ROOT).charAt(0);
         return Util.checkIfCharAtListOfStrings(coordinateX);
     }
 
-    public int getCoordinateY() {
+    public static int getCoordinateY() {
         Scanner scanner = new Scanner(System.in);
         int coordinateY = scanner.nextInt();
         return Util.checkIfNumberInRange(coordinateY);

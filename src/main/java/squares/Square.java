@@ -1,12 +1,9 @@
 package squares;
 
-import java.util.ArrayList;
-
 public class Square {
 
     private final int coordinateX;
     private final int coordinateY;
-    ArrayList<Square> squaresList;
     private SquareStatus squareStatus;
 
     public Square(int coordinateX, int coordinateY, SquareStatus squareStatus) {

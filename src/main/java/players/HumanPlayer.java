@@ -9,7 +9,7 @@ public class HumanPlayer extends Player {
     private final String name;
 
     public HumanPlayer(String name) {
-        super();
+        super(name);
         Display.printCommunicate(Communicates.askPlayerName);
         this.name = Input.getPlayerName();
     }

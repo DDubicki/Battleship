@@ -11,7 +11,7 @@ public class Display extends Input {
     private final char[] coordinateSymbols = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'};
 
     public static void printCommunicate(String communicate) {
-        System.out.println("***" + communicate + "***");
+        System.out.println("***\n" + communicate + "\n***");
     }
 
     public static String getObjectSymbol(Square square) {

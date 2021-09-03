@@ -1,16 +1,23 @@
 package UI;
 
+import squares.Board;
+
 public class Util {
 
-    protected static char checkIfCharAtListOfStrings(char character) {
-        String[] chars = new String[]{"A", "B", "C", "D", "E", "F", "G", "H", "I", "K"};
+    protected static int checkIfCharAtListOfStrings(char character) {
+        char[] chars = new char[]{'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K'};
         String stringCharacter = String.valueOf(character);
-        for (String element : chars) {
-            if (stringCharacter.equals(element)) {
-                return character;
+        for (int i = 0; i < Board.getBoardSize(); i++){
+            if (character == chars[i]){
+                return i;
             }
         }
-        return 0;
+//        for (String element : chars) {
+//            if (stringCharacter.equals(element)) {
+//                return character;
+//            }
+//        }
+        return -1;
     }
 
     protected static int checkIfNumberInRange(int coordinateY) {

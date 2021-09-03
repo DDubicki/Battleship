@@ -1,6 +1,7 @@
 package play;
 
 import UI.Display;
+import players.Player;
 import squares.Board;
 import squares.Square;
 
@@ -27,5 +28,10 @@ public class Main {
         ocean[2][2].setSquareStatus(SUNKEN);
 
         display.printBoard(ocean, oceanSize);
+        //Test3
+        Player player = new Player("name");
+        player.choosePlacementMethod();
+        display.printBoard(player.getPlayerBoard().getOcean(), Board.getBoardSize());
+
     }
 }
